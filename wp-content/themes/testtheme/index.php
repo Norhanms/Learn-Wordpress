@@ -1,4 +1,8 @@
-<?php get_header(); //Loads header template.
+<?php get_header('test'); //Loads header template. 
+/*
+get_header() for 'header.php'
+get_header("test"); for 'header-test.php'
+*/
 //https://developer.wordpress.org/reference/functions/get_header/
 ?>
     <section>
@@ -36,8 +40,11 @@
 
 </form>
 
-    <footer>copy right to codestep theme</footer>
-    
-    <?php wp_footer();?>
- </body>
- </html>
+ <?php get_footer("test");
+ // if footer.php does not exist or has a name aother than 'footer.php'
+ //it will add the default footer of wordpress
+ //if it has a name 'footer-test.php' for example (minus not underscore)
+ //you have to write get_footer("test")
+//the same for header
+ 
+ ?>
