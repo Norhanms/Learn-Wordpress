@@ -8,7 +8,7 @@ get_header("test"); for 'header-test.php'
    <hr>
     <section>
         
-        <h2>Blog posts</h2>
+        <h2>Search Results</h2>
         <?php if (have_posts()):?>
             <?php while (have_posts()): ?>
                 <?php the_post();?>
@@ -26,7 +26,7 @@ get_header("test"); for 'header-test.php'
                 </article>
             <?php endwhile?>
         <?php else:?>
-            <?php echo "there are No posts";?>
+            <?php echo "No search results";?>
         <?php endif?>
         
     </section>
@@ -36,10 +36,5 @@ get_header("test"); for 'header-test.php'
 
 
  <?php get_footer("test");
- // if footer.php does not exist or has a name aother than 'footer.php'
- //it will add the default footer of wordpress
- //if it has a name 'footer-test.php' for example (minus not underscore)
- //you have to write get_footer("test")
-//the same for header
  
  ?>
